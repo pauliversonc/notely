@@ -29,6 +29,10 @@ Notely follows a mobile-first design approach to ensure optimal usability on all
 
 The design of Notely adheres to a minimalist and simple website personality. This approach aims to keep the interface clean, uncluttered, and easy to navigate, reducing any unnecessary distractions and overwhelming elements. The focus is on providing a straightforward and efficient note-taking solution that allows you to concentrate on your thoughts without any unnecessary complexity.
 
+## Demo
+
+To see the Notely Web Application action, visit [https://pauliversonc-notely.netlify.app/](https://pauliversonc-notely.netlify.app/).
+
 ## Acknowledgements
 
 I would like to thank the following resources for their inspiration and assistance in building the Notely Web application:
