@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notely | Your Digital Note-Taking Companion</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="src/images/logo/favicon.png" />
+  <link rel="apple-touch-icon" href="src/images/logo/apple-touch-icon.png" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <script defer type="module" src="src/js/controller.js"></script>
+</head>
+
+<body>
+
+  <header class="header">
+
+
+    <button class="btn menu btn__light btn__menu">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-6 h-6 icon__sm">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>
+    </button>
+
+    <!-- Toggle: active -->
+    <button class="btn options  btn__light">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-6 h-6 icon__sm">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
+      </svg>
+    </button>
+
+    <ul class="options--lists">
+      <li>
+          <svg class="svg-icon icon__sm" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M682.215454 981.446137c-25.532318 0-42.553863-17.021545-42.553864-42.553864v-165.960067c4.255386-34.043091-8.510773-59.575409-29.787704-80.852341-12.766159-12.766159-17.021545-29.787704-8.510773-42.553864 4.255386-17.021545 21.276932-25.532318 34.043091-29.787704 123.406204-12.766159 238.301635-55.320023 238.301635-255.323181 0-46.80925-17.021545-93.6185-51.064636-131.916976-12.766159-12.766159-12.766159-29.787704-8.510772-42.553864 12.766159-34.043091 12.766159-68.086182 4.255386-102.129272-21.276932 4.255386-55.320023 17.021545-110.640045 55.320022-8.510773 8.510773-21.276932 8.510773-34.043091 4.255387-89.363113-25.532318-187.236999-25.532318-276.600112 0-12.766159 4.255386-25.532318 4.255386-38.298477-4.255387C307.741455 104.836549 269.442978 92.07039 248.166047 87.815004c-8.510773 34.043091-8.510773 68.086182 4.255386 102.129272 4.255386 17.021545 4.255386 34.043091-8.510773 42.553864-34.043091 38.298477-51.064636 85.107727-51.064636 131.916976 0 200.003158 114.895431 242.557022 238.301635 255.323181 17.021545 0 29.787704 12.766159 34.043091 29.787704 4.255386 17.021545 0 34.043091-8.510773 42.553864-21.276932 21.276932-29.787704 46.80925-29.787704 76.596954v165.960068c0 25.532318-17.021545 42.553863-42.553863 42.553863s-42.553863-17.021545-42.553864-42.553863v-72.341568c-127.66159 21.276932-182.981613-51.064636-221.28009-97.873886-17.021545-21.276932-29.787704-38.298477-46.80925-42.553864-21.276932-4.255386-38.298477-29.787704-29.787704-51.064636 4.255386-21.276932 29.787704-38.298477 51.064636-29.787704 42.553863 12.766159 68.086182 42.553863 93.6185 72.341568 34.043091 46.80925 63.830795 80.852341 153.193908 63.830795v-4.255386c0-25.532318 4.255386-55.320023 12.766159-76.596955-119.150818-25.532318-246.812408-102.129272-246.812408-327.664748 0-63.830795 21.276932-123.406204 59.575409-170.215454-17.021545-59.575409-12.766159-114.895431 12.766159-170.215454 4.255386-12.766159 12.766159-21.276932 25.532318-25.532318 17.021545-4.255386 72.341568-12.766159 187.236999 59.575409 93.6185-21.276932 191.492386-21.276932 280.855499 0 110.640045-72.341568 170.215454-63.830795 187.236999-59.575409 12.766159 4.255386 21.276932 12.766159 25.532319 25.532318 21.276932 55.320023 25.532318 110.640045 12.766159 165.960067 38.298477 46.80925 59.575409 106.384659 59.575408 170.215454 0 242.557022-144.683136 306.387817-246.812408 331.920135 8.510773 25.532318 12.766159 55.320023 12.766159 80.852341V938.892273c0 25.532318-17.021545 42.553863-42.553863 42.553864z"  /></svg>
+          <a href="#">Github</a>
+      </li>
+    </ul>
+
+
+  </header>
+
+
+  <!-- Toggle: show -->
+  <nav class="side-nav">
+
+    <div class="side-nav--header">
+      <button class="btn btn__default side-nav--btn__menu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6 icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+
+      <h1 class="nav--header--title">Notely.</h1>
+    </div>
+
+    <form class="search--form" action="#">
+      <input type="text" class="search">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-6 h-6 icon search">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+      </svg>
+    </form>
+
+
+    <ul class="side-nav--links">
+      <!-- OPTIONS: active -->
+      <li class="side-nav--link active" data-link-name="saved">
+
+        <div class="center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6 icon__sm">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+          </svg>
+
+          <a href="#">Saved</a>
+        </div>
+
+
+
+        <div class="center">
+          <span class="count__notes">0</span>
+        </div>
+
+      </li>
+      <li class="side-nav--link" data-link-name="important">
+        <div class="center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6 icon__sm">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+          </svg>
+
+          <a href="#">Important</a>
+        </div>
+
+        <div class="center"><span class="count__important">0</span></div>
+
+      </li>
+      <li class="side-nav--link" data-link-name="trash">
+        <div class="center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6 icon__sm">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+          </svg>
+          <a href="#">Trash</a>
+        </div>
+        <div class="center"><span class="count__trash">0</span></div>
+      </li>
+    </ul>
+  </nav>
+
+
+  <main class="container">
+
+    <!-- SORT CONTROL WRAPPER -->
+    <div class="main--control--btns mb-2">
+
+      <!-- Sort -->
+      <button class="main--control--btn btn__sort btn btn__light">
+
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 icon__sm icon__down">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0l-3.75-3.75M17.25 21L21 17.25" />
+        </svg>
+
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 icon__sm icon__up">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 4.5h14.25M3 9h9.75M3 13.5h5.25m5.25-.75L17.25 9m0 0L21 12.75M17.25 9v12" />
+        </svg>
+        
+      </button>
+
+
+      <!-- View -->
+      <button class="main--control--btn  btn btn__view btn__light">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6 icon__sm">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z" />
+        </svg>
+
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6 icon__sm d-none">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
+        </svg>
+
+      </button>
+
+    </div>
+
+
+
+    <div class="main--card--container--wrapper">
+
+      <!-- Trash Section -->
+      <!-- OPTIONS| alt-grid -->
+      <div class="main--card--grid__trash ">
+      </div>
+
+      <!-- Pinned Section -->
+      <div class="main--card--title pinned">Pinned</div>
+      <!-- OPTIONS| alt-grid -->
+      <div class="main--card--grid__pinned ">
+      </div>
+
+      <!-- Notes Section -->
+      <div class="main--card--title saved mt-3">Saved</div>
+      <!-- OPTIONS| alt-grid -->
+      <div class="main--card--grid__saved ">
+      </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <!-- Button ADD Notes -->
+    <button class="btn btn__primary add">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-6 h-6 icon__lg plus">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+      </svg>
+
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-6 h-6 icon__lg times">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+
+    </button>
+
+
+  </main>
+
+
+
+  <!-- Modal Notes -->
+  <!-- OPTIONS: show, update-on-->
+  <div class="modal">
+
+    <!-- OPTIONS: pinned -->
+    <div class="modal--card ">
+
+      <div class="modal--card--pin" role="button">
+        <!-- Outline -->
+        <svg class="svg-icon icon pin__outline" viewBox="0 0 1024 1024" version="1.1"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M768 128v85.333333h-42.666667v256l85.333334 128v85.333334h-256v298.666666h-85.333334v-298.666666H213.333333v-85.333334l85.333334-128V213.333333H256V128h512zM384 213.333333v281.856L315.904 597.333333h392.192L640 495.189333V213.333333H384z" />
+        </svg>
+        <!-- Solid -->
+        <svg class="svg-icon icon pin__solid" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M768 128v85.333333h-42.666667v256l85.333334 128v85.333334h-256v298.666666h-85.333334v-298.666666H213.333333v-85.333334l85.333334-128V213.333333H256V128z" />
+        </svg>
+      </div>
+
+
+      <div class="form--wrapper">
+        <form action="#" class="modal--card--form">
+          <textarea class="modal--card--textarea form__title" placeholder="Title" rows="2"></textarea>
+          <textarea class="modal--card--textarea form__body" placeholder="Take a note..." rows="2"></textarea>
+        </form>
+      </div>
+
+      <div class="modal--card--footer">
+
+        <button class="modal--footer--btn update mbtn__primary" data-btn-type = "update">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6 icon__sm">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+          </svg>
+          <span>Update</span>
+        </button>
+
+        <button class="modal--footer--btn save mbtn__primary" data-btn-type = "save">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6 icon__sm">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+          </svg>
+          <span>Save</span>
+        </button>
+
+        <button class="modal--footer--btn close mbtn__default" data-btn-type = "close">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6 icon__sm">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+          <span>Close</span>
+        </button>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Toast: Alert Message -->
+  <div class="toast">
+    <div class="toast--icon">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+      </svg>
+    </div>
+    <p class="toast--message">
+      Notes Saved Successfully!
+    </p>
+  </div>
+
+  <!-- OPTIONS: show -->
+  <div class="selected--options">
+    <span class="selected--options--header">
+      <strong class="selected--options--header--count">0</strong>
+      Items Selected
+    </span>
+
+    <!-- OPTIONS: modified -->
+    <ul class="selected--options--links">
+      <li class="selected--options--link">
+        <button class="btn btn__default options__pinned" data-btn-type="pinned">
+          <svg class="svg-icon icon__sm pin__outlined" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M768 128v85.333333h-42.666667v256l85.333334 128v85.333334h-256v298.666666h-85.333334v-298.666666H213.333333v-85.333334l85.333334-128V213.333333H256V128h512zM384 213.333333v281.856L315.904 597.333333h392.192L640 495.189333V213.333333H384z" />
+          </svg>
+          <svg class="svg-icon icon__sm pin__solid" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M768 128v85.333333h-42.666667v256l85.333334 128v85.333334h-256v298.666666h-85.333334v-298.666666H213.333333v-85.333334l85.333334-128V213.333333H256V128z" />
+          </svg>
+        </button>
+      </li>
+
+      <li class="selected--options--link">
+        <button class="btn btn__default options__important" data-btn-type="important">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6 icon__sm icon__star">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+          </svg>
+        </button>
+      </li>
+
+      <li class="selected--options--link">
+        <button class="btn btn__default options__restore" data-btn-type="restore"><svg
+            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-6 h-6 icon__sm">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 15l-6 6m0 0l-6-6m6 6V9a6 6 0 0112 0v3" />
+          </svg>
+        </button>
+      </li>
+
+      <li class="selected--options--link">
+        <button class="btn btn__default options__trash" data-btn-type="trash"><svg
+            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-6 h-6 icon__sm">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+          </svg>
+        </button>
+      </li>
+
+
+      <li class="selected--options--link">
+        <button class="btn  btn__default ml-2 options__close" data-btn-type="close">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6 icon__sm">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </li>
+
+    </ul>
+  </div>
+
+</body>
+
+</html>

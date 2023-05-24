@@ -1,0 +1,15 @@
+{
+  "name": "notely",
+  "version": "1.0.0",
+  "description": "Notely is a web application built using HTML, CSS, and JavaScript. It is designed to serve as a note-taking platform similar to Google Keep.",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "author": "Paul Iverson Cortez",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-webmanifest": "^2.8.3",
+    "parcel": "^2.8.3"
+  }
+}
