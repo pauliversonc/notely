@@ -70,7 +70,7 @@ const controlSidenavLink = function(link){
 // id represents state.notes.id
 const controlNote = function(element, index, id){
 
-    // 0. handle checkbox note
+  // 0. handle checkbox note
   if(index === 0){
     // 0a. handle clicked checkbox / update note to selected (true / false)
     handleCheckbox(element);
@@ -84,6 +84,9 @@ const controlNote = function(element, index, id){
     const isImportant = model.areAllSelNotesStatus('important');
     // 0f. toggle selected options visibility base on selected notes count
     optionsView.toggleSelOption(selectedNotesCount, statePath, isPinned, isImportant);
+    // 0e. hide btn add when checkbox is active
+    if (selectedNotesCount) modalView.hideBtnAdd();
+    else modalView.showBtnAdd();
   }
 
   // 1. get the note by id and open modal to get ready for update
@@ -135,8 +138,7 @@ const handleCheckbox = function(element){
   model.selectNote(+cardId);
   // 3. toggle checkbox / pass the maincard element
   mainView.toggleCheckbox(mainCard);
-  // 4. hide btn add when checkbox is active
-  modalView.hideBtnAdd();
+
 }
 
 // handle selected btn per note (per card)

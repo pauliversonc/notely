@@ -540,8 +540,8 @@ header{
   position: absolute;
   padding-left: .2rem;
 
-  top: -11px;
-  left: 0;
+  top: 0px;
+  left: -11px;
   transform: translateY(-50%);
   transform: translateX(-50%);
   transition: all 0.3s ease-out;
