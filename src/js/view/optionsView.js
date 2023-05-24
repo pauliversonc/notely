@@ -1,3 +1,5 @@
+import 'core-js/stable';
+
 class OptionsView {
   _selectedOptions = document.querySelector('.selected--options');
   _selectedCount = document.querySelector('.selected--options--header--count');

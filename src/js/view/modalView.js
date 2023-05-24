@@ -1,3 +1,5 @@
+import 'core-js/stable';
+
 class ModalView {
   _note;
   _update = false;

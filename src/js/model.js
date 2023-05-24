@@ -1,3 +1,5 @@
+import 'core-js/stable';
+
 export const state = {
   notes: [],
   path: 'saved',

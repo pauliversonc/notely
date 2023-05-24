@@ -10,6 +10,8 @@ Notely is a web application that allows you to create and manage notes, similar 
 - CSS3
 - JavaScript
 - Hero Icons
+- Parcel
+- Core-JS
 
 ## Features
 

@@ -1,3 +1,5 @@
+import 'core-js/stable';
+
 class MainView {
   _notes;
   _pinnedNotes;

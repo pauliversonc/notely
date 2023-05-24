@@ -1,3 +1,4 @@
+import 'core-js/stable';
 import * as model from "./model.js";
 import mainView from "./view/mainView.js";
 import sidenavView from "./view/sidenavView.js";

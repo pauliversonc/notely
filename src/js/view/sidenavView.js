@@ -1,3 +1,5 @@
+import 'core-js/stable';
+
 class SideNavView {
   _sideNav = document.querySelector('.side-nav');
   _btnMenu = document.querySelector('.btn__menu');
