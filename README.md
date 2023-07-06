@@ -33,7 +33,7 @@ The design of Notely adheres to a minimalist and simple website personality. Thi
 
 ## Demo
 
-To see the Notely Web Application in action, visit [https://pauliversonc-notely.netlify.app/](https://pauliversonc-notely.netlify.app/).
+To see the Notely Web Application in action, visit [https://notely-pauliversonc.netlify.app/](https://notely-pauliversonc.netlify.app/).
 
 ## Acknowledgements
 
